@@ -20,11 +20,17 @@ public class LoginPage extends AbstarctClass {
 	WebElement wePassWord;
 	@FindBy(css = ".action.login.primary")
 	WebElement weSignIn;
-
+	@FindBy(xpath="//header/div[1]/div[1]/ul[1]/li[1]/span[1]")
+	WebElement weAccCreationMessage;
 	public LandingPage Login(String userID, String passWord) {
 		weUserId.sendKeys(userID);
 		wePassWord.sendKeys(passWord);
 		weSignIn.click();
 		return new LandingPage(objWebdriver);
+	}
+	public boolean IsSuccessfullyRegistered()
+	{
+		visibilityOf(weAccCreationMessage);
+		return true;
 	}
 }

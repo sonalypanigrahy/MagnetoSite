@@ -16,10 +16,12 @@ import BaseClassesInterviewPractice.LoginPage;
 public class ExistingUserLoginTest extends BaseTest  {
 	
 	@Test
-	public void Login() throws IOException
+	public void Login() throws IOException, InterruptedException
 	{
 	LoginPage objLoginPage=objLandingPage.GoToSignIn();
 	objLoginPage.Login(EMAIL, PASSWORD);
+	objLoginPage.IsSuccessfullyRegistered();
+	Thread.sleep(3000);
 	TakeScreenshot("LoginPage");
 	}
 	@AfterTest
