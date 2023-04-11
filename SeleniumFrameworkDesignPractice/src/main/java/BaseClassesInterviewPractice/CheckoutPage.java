@@ -22,9 +22,6 @@ public class CheckoutPage extends AbstarctClass {
 	WebElement weToggle;
 	@FindBy(linkText="My Account")
 	WebElement weMyAccountlink;
-	
-	//@FindBy(css=".action.primary.continue")
-	//WebElement weContinueButton;
 	public void PlaceOrder()
 	{
 		visibilityOf(wePlaceOrderbutton);

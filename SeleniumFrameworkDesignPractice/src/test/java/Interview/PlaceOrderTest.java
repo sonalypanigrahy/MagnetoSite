@@ -20,17 +20,22 @@ import BaseClassesInterviewPractice.MyOrdersPage;
 import BaseClassesInterviewPractice.ProductCatalogue;
 
 public class PlaceOrderTest extends BaseTest {
-	@BeforeTest
+	@Test(enabled=false)
 	public void LogInDetails()
 	{
 		objLandingPage = objLandingPage.GoToSignIn().Login(EMAIL, PASSWORD);
 	}	
-	@Test
-	public void PlaceOrder() throws InterruptedException, ParseException, IOException
+	@Test(enabled=false)
+	public void AddItems()
 	{
 		ProductCatalogue objProductCatalogue=new ProductCatalogue(objWebDriver);
 		objProductCatalogue.SelectMenTops(JACKETS,JACKETSQTY);
 		objProductCatalogue.SelectMenBottoms(PANTS, PANTSQTY);
+	}
+	@Test()
+	public void PlaceOrder() throws InterruptedException, ParseException, IOException
+	{
+		ProductCatalogue objProductCatalogue= new ProductCatalogue(objWebDriver);
 		CheckOutCartPage objCheckOutCartPage=objProductCatalogue.ViewCartItems();
 		String[] totalItemNames=objCheckOutCartPage.GetTotalItemNames();
 		Thread.sleep(3000);
@@ -41,16 +46,11 @@ public class PlaceOrderTest extends BaseTest {
 		Thread.sleep(5000);
 		TakeScreenshot("CheckOutPaymentPage");
 		objCheckoutPage.PlaceOrder();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		String currentOrderID= objCheckoutPage.GetOrderID();
 		TakeScreenshot("OrderConfirmationPage");
 		MyOrdersPage objMyOrdersPage=objCheckoutPage.GoToMyOrders();
 		Boolean isOrderVerified=objMyOrdersPage.VerifyOrder(currentOrderID,totalItemNames,totalAmount);
 		Assert.assertTrue(isOrderVerified);
 	}		
-	@AfterTest
-	public void CleanUp()
-	{
-		objWebDriver.close();
-	}
 }

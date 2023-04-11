@@ -15,7 +15,7 @@ public class AddressPage extends AbstarctClass {
 		this.objWebdriver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(id="street_1")
+	@FindBy(name="street[]")
 	WebElement weStreetAddress;
 	@FindBy(xpath="//input[@name='city']")
 	WebElement weCity;
@@ -52,17 +52,15 @@ public class AddressPage extends AbstarctClass {
 	public void AddAddressforDelivery(AddressDetails objAddressDetails ) throws InterruptedException
 	{
 		objAddressDetails.FillAddress();
-		//visibilityOf(weStreetAddress);
+		visibilityOf(weStreetAddress);
 		weStreetAddress.sendKeys(objAddressDetails.getStreetAddress());
 		weCity.sendKeys(objAddressDetails.getCity());
 		weCountry.click();
 		actionforDropdown(weCountry,objAddressDetails.getCountry());
 		Thread.sleep(4000);
-		VerifyVisibilityOfElementLocated(name);
 		weProvince.sendKeys(objAddressDetails.getState());
 		wePostalcode.sendKeys(objAddressDetails.getPostalCode());
-		weTelephonenumber.sendKeys(objAddressDetails.getPhoneNumber());
-		
+		weTelephonenumber.sendKeys(objAddressDetails.getPhoneNumber());	
 	}
 	public void GoToAddress() throws InterruptedException
 	{

@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="10" total="14" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-10T11:14:08 AEST" name="Suite" finished-at="2023-04-10T11:15:02 AEST" duration-ms="53741">
+  <suite started-at="2023-04-11T14:35:27 AEST" name="Suite" finished-at="2023-04-11T14:37:08 AEST" duration-ms="100812">
     <groups>
     </groups>
-    <test started-at="2023-04-10T11:14:08 AEST" name="Test" finished-at="2023-04-10T11:15:02 AEST" duration-ms="53741">
-      <class name="Interview.PlaceOrderTest">
-        <test-method is-config="true" signature="InitializeDriver()[pri:0, instance:Interview.PlaceOrderTest@27f981c6]" started-at="2023-04-10T11:14:04 AEST" name="InitializeDriver" finished-at="2023-04-10T11:14:08 AEST" duration-ms="3917" status="PASS">
+    <test started-at="2023-04-11T14:35:27 AEST" name="Test" finished-at="2023-04-11T14:37:08 AEST" duration-ms="100812">
+      <class name="Interview.AddressPageTest">
+        <test-method signature="AddressforDelivery()[pri:0, instance:Interview.AddressPageTest@72e5a8e]" started-at="2023-04-11T14:36:06 AEST" name="AddressforDelivery" finished-at="2023-04-11T14:36:25 AEST" duration-ms="19913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddressforDelivery -->
+      </class> <!-- Interview.AddressPageTest -->
+      <class name="Interview.ExistingUserLoginTest">
+        <test-method is-config="true" signature="InitializeDriver()[pri:0, instance:Interview.ExistingUserLoginTest@2d710f1a]" started-at="2023-04-11T14:35:23 AEST" name="InitializeDriver" finished-at="2023-04-11T14:35:27 AEST" duration-ms="4297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeDriver -->
-        <test-method is-config="true" signature="LogInDetails()[pri:0, instance:Interview.PlaceOrderTest@27f981c6]" started-at="2023-04-10T11:14:08 AEST" name="LogInDetails" finished-at="2023-04-10T11:14:11 AEST" duration-ms="3148" status="PASS">
+        <test-method signature="Login()[pri:0, instance:Interview.ExistingUserLoginTest@2d710f1a]" started-at="2023-04-11T14:35:27 AEST" name="Login" finished-at="2023-04-11T14:35:34 AEST" duration-ms="6910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogInDetails -->
-        <test-method signature="PlaceOrder()[pri:0, instance:Interview.PlaceOrderTest@27f981c6]" started-at="2023-04-10T11:14:11 AEST" name="PlaceOrder" finished-at="2023-04-10T11:15:02 AEST" duration-ms="50410" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PlaceOrder -->
-        <test-method is-config="true" signature="CleanUp()[pri:0, instance:Interview.PlaceOrderTest@27f981c6]" started-at="2023-04-10T11:15:02 AEST" name="CleanUp" finished-at="2023-04-10T11:15:02 AEST" duration-ms="143" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="CleanUp()[pri:0, instance:Interview.ExistingUserLoginTest@2d710f1a]" started-at="2023-04-11T14:37:07 AEST" name="CleanUp" finished-at="2023-04-11T14:37:08 AEST" duration-ms="390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanUp -->
+      </class> <!-- Interview.ExistingUserLoginTest -->
+      <class name="Interview.PlaceOrderTest">
+        <test-method signature="PlaceOrder()[pri:0, instance:Interview.PlaceOrderTest@52b1beb6]" started-at="2023-04-11T14:36:25 AEST" name="PlaceOrder" finished-at="2023-04-11T14:37:07 AEST" duration-ms="41880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PlaceOrder -->
       </class> <!-- Interview.PlaceOrderTest -->
+      <class name="Interview.CartCheckoutTest">
+        <test-method signature="VerifyOrderSummary()[pri:0, instance:Interview.CartCheckoutTest@7d4f9aae]" started-at="2023-04-11T14:35:34 AEST" name="VerifyOrderSummary" finished-at="2023-04-11T14:36:06 AEST" duration-ms="31679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOrderSummary -->
+      </class> <!-- Interview.CartCheckoutTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

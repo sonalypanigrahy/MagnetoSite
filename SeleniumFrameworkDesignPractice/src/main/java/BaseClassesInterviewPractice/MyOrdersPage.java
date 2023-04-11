@@ -39,8 +39,6 @@ public class MyOrdersPage extends AbstarctClass {
 		Thread.sleep(4000);
 		for(int n=0;n<listOrderIDs.size();n++)
 		{
-			//System.out.println(listOrderIDs.get(n).getText());
-			//System.out.println(orderId);
 			if(listOrderIDs.get(n).getText().equals(orderId))
 			{
 				listViewOrderlink.get(n).click();

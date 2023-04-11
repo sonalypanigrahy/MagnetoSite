@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\sonal\selenium-practice\SeleniumFrameworkDesignPractice\testng.xml</span>
+                    <span>C:\Users\sonal\git\repository2\SeleniumFrameworkDesignPractice\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Interview.AddressPageTest" class="method navigator-link" hash-for-method="AddressforDelivery">AddressforDelivery</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Interview.ExistingUserLoginTest" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Interview.PlaceOrderTest" class="method navigator-link" hash-for-method="PlaceOrder">PlaceOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Interview.CartCheckoutTest" class="method navigator-link" hash-for-method="VerifyOrderSummary">VerifyOrderSummary</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,6 +137,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">Interview.ExistingUserLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">Interview.PlaceOrderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,10 +164,40 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Interview.CartCheckoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyOrderSummary">
+                  </a> <!-- VerifyOrderSummary -->
+                  <span class="method-name">VerifyOrderSummary</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Interview.AddressPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddressforDelivery">
+                  </a> <!-- AddressforDelivery -->
+                  <span class="method-name">AddressforDelivery</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sonal\selenium-practice\SeleniumFrameworkDesignPractice\testng.xml</span>
+            <span class="header-content">C:\Users\sonal\git\repository2\SeleniumFrameworkDesignPractice\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,6 +206,13 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;Interview.ExistingUserLoginTest&quot;/&gt;
+      &lt;class name=&quot;Interview.CartCheckoutTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;Log&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Interview.CartCheckoutTest --&gt;
+      &lt;class name=&quot;Interview.AddressPageTest&quot;/&gt;
       &lt;class name=&quot;Interview.PlaceOrderTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -160,7 +227,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,16 +253,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PlaceOrder')
 data.setCell(0, 2, 'Interview.PlaceOrderTest')
-data.setCell(0, 3, 50410);
+data.setCell(0, 3, 41880);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'VerifyOrderSummary')
+data.setCell(1, 2, 'Interview.CartCheckoutTest')
+data.setCell(1, 3, 31679);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AddressforDelivery')
+data.setCell(2, 2, 'Interview.AddressPageTest')
+data.setCell(2, 3, 19913);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Login')
+data.setCell(3, 2, 'Interview.ExistingUserLoginTest')
+data.setCell(3, 3, 6910);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -210,9 +289,44 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Interview.PlaceOrderTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CleanUp</span>
+                <br/>
+                <span class="ignored-method-name">InitializeDriver</span>
+                <br/>
+                <span class="ignored-method-name">LogInDetails</span>
+                <br/>
+                <span class="ignored-method-name">AddItems</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Interview.CartCheckoutTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CleanUp</span>
+                <br/>
+                <span class="ignored-method-name">InitializeDriver</span>
+                <br/>
+                <span class="ignored-method-name">Log</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Interview.AddressPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">LogInDetails</span>
+                <br/>
+                <span class="ignored-method-name">CleanUp</span>
+                <br/>
+                <span class="ignored-method-name">InitializeDriver</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -221,22 +335,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Interview.PlaceOrderTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Interview.ExistingUserLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">InitializeDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">LogInDetails</span>
-                <span class="method-start">3919 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">4324 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Interview.CartCheckoutTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">VerifyOrderSummary</span>
+                <span class="method-start">11242 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Interview.AddressPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AddressforDelivery</span>
+                <span class="method-start">42924 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Interview.PlaceOrderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">PlaceOrder</span>
-                <span class="method-start">7098 ms</span>
+                <span class="method-start">62840 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Interview.ExistingUserLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">CleanUp</span>
-                <span class="method-start">57515 ms</span>
+                <span class="method-start">104720 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

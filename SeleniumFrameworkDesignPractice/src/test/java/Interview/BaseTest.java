@@ -30,4 +30,9 @@ public class BaseTest {
 		File src= ((TakesScreenshot)objWebDriver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File("C:\\Users\\sonal\\OneDrive\\Desktop\\ScreenshotFolder\\"+fileName+".png"));
 	}
+	@AfterTest
+	public void CleanUp()
+	{
+		objWebDriver.close();
+	}
 }

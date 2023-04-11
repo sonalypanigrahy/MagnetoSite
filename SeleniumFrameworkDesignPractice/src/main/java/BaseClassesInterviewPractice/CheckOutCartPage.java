@@ -30,12 +30,8 @@ public class CheckOutCartPage extends AbstarctClass {
 	WebElement weCartSummarySubtotal;
 	@FindBy(css=".action.delete")
 	List<WebElement> listDeleteButtons;
-	@FindBy(css=".grand .price")
+	@FindBy(css=".grand.totals .price")
 	WebElement weCartOrderTotal;
-	//@FindBy(xpath="//tbody/tr[3]/td[1]/strong/span")
-	//WebElement weCartOrderTotal;
-	//By weCartOrderTotal1=By.xpath("//tbody/tr[3]/td[1]/strong/span");
-	
 	@FindBy(css=".col.item .product-item-details .product-item-name a")
 	List<WebElement> listCartProductItems;
 	@FindBy(css=".action.primary.checkout span")
@@ -105,10 +101,12 @@ public class CheckOutCartPage extends AbstarctClass {
 	{
 		visibilityOf(weCheckOutButton);
 		weCheckOutButton.click();
+		Thread.sleep(3000);
 		return new CheckOutShipping(objWebdriver);
 	}
 	public double GetTotalAmount() throws ParseException, InterruptedException
 	{
+		visibilityOf(weCartOrderTotal);
 		return priceConversion(weCartOrderTotal.getText()); 
 	}
 	public String[] GetTotalItemNames()
@@ -120,16 +118,5 @@ public class CheckOutCartPage extends AbstarctClass {
 			arrayList.add(listCartProductItems.get(i).getText());
 		}
 		return arrayList.toArray(totalItems);
-	}
-	public void RemoveItems() throws InterruptedException
-	{
-		ProductCatalogue objProductCatalogue=new ProductCatalogue(objWebdriver);
-		objProductCatalogue.ViewCartItems();
-		//Thread.sleep(4000);
-		visibilityOfElements(listTotalProducts);
-		for(int j=0;j<listTotalProducts.size();j++)
-		{
-			listDeleteButtons.get(j).click();
-		}
 	}
 }

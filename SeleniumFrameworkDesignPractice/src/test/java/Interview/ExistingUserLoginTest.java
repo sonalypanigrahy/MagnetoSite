@@ -15,7 +15,7 @@ import BaseClassesInterviewPractice.LoginPage;
 
 public class ExistingUserLoginTest extends BaseTest  {
 	
-	@Test
+	@Test()
 	public void Login() throws IOException, InterruptedException
 	{
 	LoginPage objLoginPage=objLandingPage.GoToSignIn();
@@ -24,9 +24,5 @@ public class ExistingUserLoginTest extends BaseTest  {
 	Thread.sleep(3000);
 	TakeScreenshot("LoginPage");
 	}
-	@AfterTest
-	public void CleanUp()
-	{
-		objWebDriver.close();
-	}
+	
 }	

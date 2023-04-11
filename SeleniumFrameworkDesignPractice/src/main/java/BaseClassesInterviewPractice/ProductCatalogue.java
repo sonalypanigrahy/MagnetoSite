@@ -122,6 +122,7 @@ public class ProductCatalogue extends AbstarctClass {
 	public void ItemsDisplayed() throws InterruptedException
 	{
 		Thread.sleep(4000);
+		visibilityOf(weCartButton);
 		weCartButton.click();
 	}
 	public CheckOutShipping GoForCheckOut() throws InterruptedException

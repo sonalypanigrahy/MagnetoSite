@@ -18,12 +18,11 @@ import BaseClassesInterviewPractice.ProductCatalogue;
 
 public class CartCheckoutTest extends BaseTest {
 
-	@BeforeTest
+	@Test
 	public void Log() {
 		objLandingPage = objLandingPage.GoToSignIn().Login(EMAIL, PASSWORD);
 	}
-
-	@Test
+	@Test()
 	public void VerifyOrderSummary() throws ParseException, InterruptedException, IOException {
 		ProductCatalogue objProductCatalougue = new ProductCatalogue(objWebDriver);
 		objProductCatalougue.SelectMenTops(JACKETS, JACKETSQTY);
@@ -36,10 +35,5 @@ public class CartCheckoutTest extends BaseTest {
 		String[] totalItemNames = objCheckOutCartPage.GetTotalItemNames();
 		Double totalAmount = objCheckOutCartPage.GetTotalAmount();
 		TakeScreenshot("CartCheckout");
-	}
-
-	@AfterTest
-	public void Cleanup() {
-		objWebDriver.close();
 	}
 }
